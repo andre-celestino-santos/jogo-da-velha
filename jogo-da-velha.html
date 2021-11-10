@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Jogo da Velha</title>
+</head>
+
+<body>
+    <div id="popup" data-popup>
+        <p data-titulo-popup>Info</p>
+        <p data-mensagem-popup></p>
+        <div id="popup-botoes">
+            <input type="button" value="OK" class="botao-verde" data-botao-popup-ok>
+        </div>
+    </div>
+
+    <header>
+        <div id="box-header">
+            <h1>[- Jogo da Velha -]</h1>
+        </div>
+    </header>
+
+    <main>
+        <div id="menu">
+            <nav>
+               <ul>
+                   <li><a href="index.html">| Home |</a></li>
+                   <li><a href="jogo-da-velha.html">| Jogo da Velha |</a></li>
+                   <li><a href="jogo-da-velha-ranking.html">| Ranking |</a></li>
+               </ul>
+           </nav>
+       </div>
+       
+        <div id="box-principal">
+            <div id="box-jogo-da-velha" data-jogo-da-velha>
+                <div id="box-dados-jogador">
+                    <form data-form-jogador>
+                        <p>Jogador</p>
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" placeholder="Seu nome aqui ..." class="input-nome" required
+                            data-input-nome>
+                        <input type="submit" value="Jogar" class="botao-verde" data-botao-jogar>
+                    </form>
+                    <p data-nome-jogador-atual></p>
+                    <input type="button" value="Parar" class="botao-vermelho" data-botao-parar>
+                </div>
+
+                <div id="box-matriz">
+                    <table id="table-matriz">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
