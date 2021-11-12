@@ -41,8 +41,6 @@ const eventoClickBotaoParar = (evento) => {
 
     limparNomeJogadorAtual();
 
-    limparNomeJogadorAtual();
-
     botaoPararHide();
 
     removerEventoTabelaMatriz();
@@ -62,7 +60,7 @@ const eventoTabelaMatriz = (evento) => {
 
     preencherCelulaTabelaMatriz(celula, "X");
 
-    if (verificarSeguardarVitoriaDoJogador("X")) {
+    if (verificarVitoriaDoJogador("X")) {
         abrirPopUp(inputNome.value + " você ganhou! :)");
         guardarVitoriaDoJogador(inputNome.value);
         return;
@@ -79,7 +77,7 @@ const eventoTabelaMatriz = (evento) => {
 
     preencherCelulaTabelaMatriz(celulaPc, "O");
 
-    if (verificarSeguardarVitoriaDoJogador("O")) {
+    if (verificarVitoriaDoJogador("O")) {
         abrirPopUp(inputNome.value + " você perdeu! :(");
         guardarDerrotaJogador(inputNome.value);
         return;
@@ -154,7 +152,7 @@ function limparInputNomeJogador() {
     inputNome.value = "";
 }
 
-function verificarSeguardarVitoriaDoJogador(texto) {
+function verificarVitoriaDoJogador(texto) {
     let primeiraPosicaoH = 0;
     let primeiraPosicaoD = 0;
     for (let i = 0; i < 3; i++) {
